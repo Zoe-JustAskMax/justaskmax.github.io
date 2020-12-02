@@ -1,1 +1,348 @@
-<h1>Test</h1>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Just Ask Max</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/Browser-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/Browser-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="favicon/Browser-96x96.png"
+    />
+    <style>
+      @font-face {
+        font-family: 'Tusker';
+        src: url('Tusker.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'DmSans-Bold';
+        src: url('DMSans-Bold.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'DMSans-Regular';
+        src: url('DMSans-Regular.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'RocGrotesk';
+        src: url('RocGrotesk.woff2') format('woff2');
+      }
+
+      body {
+        background-color: #c8f0ff;
+        font-family: sans-serif;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container {
+        display: flex;
+        padding: 12px;
+        flex-direction: column;
+        flex: 1;
+        max-width: 332px;
+        align-self: center;
+      }
+
+      @media only screen and (min-width: 380px) {
+        .container {
+          padding: 24px;
+        }
+      }
+
+      @media only screen and (min-width: 1120px) {
+        .container {
+          padding: 30px 0;
+          max-width: 1024px;
+        }
+      }
+
+      .content-container {
+        display: flex;
+        align-items: center;
+        margin: auto 0;
+      }
+
+      .text-content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
+
+      @media only screen and (min-width: 1120px) {
+        .text-content-container {
+          max-width: 500px;
+          align-items: initial;
+          flex: initial;
+        }
+      }
+
+      .header-logo-wrapper {
+        width: 200px;
+        height: 33px;
+        background-position: center;
+        background-size: 200px 33px;
+        background-image: url('./Logo.svg');
+      }
+
+      .mobile-icon-top {
+        width: 51px;
+        height: 47px;
+        background-position: center;
+        background-size: 51px 47px;
+        background-image: url('./mobile-icon1.png');
+        position: absolute;
+        top: 104px;
+        right: 32px;
+      }
+
+      @media only screen and (min-width: 1120px) {
+        .mobile-icon-top {
+          display: none;
+        }
+      }
+
+      .mobile-icon-bottom {
+        width: 60px;
+        height: 60px;
+        background-position: center;
+        background-size: 60px;
+        background-image: url('mobile-icon2.png');
+        position: absolute;
+        bottom: 104px;
+        left: 22px;
+      }
+
+      @media only screen and (min-width: 1120px) {
+        .mobile-icon-bottom {
+          display: none;
+        }
+      }
+
+      .heading {
+        font-weight: 800;
+        font-size: 33px;
+        text-align: center;
+        line-height: 40px;
+        margin-bottom: 0;
+        font-family: 'Tusker', sans-serif;
+        text-transform: uppercase;
+        color: #6e64ff;
+        flex: 1;
+      }
+
+      @media only screen and (min-width: 1120px) {
+        .heading {
+          text-align: left;
+          font-size: 50px;
+          line-height: 56px;
+        }
+      }
+
+      .subheading {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 24px;
+        text-align: center;
+        color: #00283c;
+        margin-bottom: 0;
+        margin-top: 32px;
+        flex: 1;
+        font-family: 'RocGrotesk', sans-serif;
+      }
+
+      @media only screen and (min-width: 1120px) {
+        .subheading {
+          text-align: left;
+        }
+      }
+
+      .cta-caption {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        flex: 1;
+        margin-top: 56px;
+        font-family: 'DmSans-Bold', sans-serif;
+      }
+
+      @media only screen and (min-width: 1120px) {
+        .cta-caption {
+          text-align: left;
+        }
+      }
+
+      .cta {
+        color: #ffffff;
+        background-color: #ff5000;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 24px;
+        margin-top: 16px;
+        padding: 8px 16px;
+        text-align: center;
+        border-radius: 5px;
+        max-width: 128px;
+        font-family: 'DmSans-Bold', sans-serif;
+      }
+
+      .cta:link,
+      .cta:visited {
+        text-decoration: inherit;
+      }
+
+      .content {
+        margin-top: 8px;
+        line-height: 24px;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 400;
+        color: #00283c;
+        flex: 1;
+        font-family: 'DMSans-Regular', sans-serif;
+      }
+
+      @media only screen and (min-width: 1120px) {
+        .content {
+          text-align: left;
+        }
+      }
+
+      .hero {
+        display: none;
+        width: 440px;
+        height: 568px;
+        background-size: 100%;
+        background-position: center;
+        background-image: url('./Hero.png');
+        margin-left: auto;
+      }
+
+      @media only screen and (min-width: 1120px) {
+        .hero {
+          display: block;
+        }
+      }
+
+      .affiliates-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .afilliate {
+        height: 33px;
+      }
+
+      .small {
+        height: 16px;
+      }
+
+      .afilliate:not(:first-child) {
+        margin-left: 33px;
+      }
+
+      @media only screen and (min-width: 1120px) {
+        .afilliate:not(:first-child) {
+          margin-left: 0;
+        }
+
+        .afilliate:not(:last-child) {
+          margin-right: 33px;
+        }
+      }
+
+      .afilliate-hidden,
+      .afilliate-smallest-hidden {
+        display: none;
+      }
+
+      @media only screen and (min-width: 380px) {
+        .afilliate-smallest-hidden {
+          display: block;
+        }
+      }
+
+      @media only screen and (min-width: 1120px) {
+        .afilliate-hidden {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-logo-wrapper"></div>
+      <div class="content-container">
+        <div class="text-content-container">
+          <div class="mobile-icon-top"></div>
+          <h1 class="heading">A Revolution Is Coming</h1>
+          <div class="mobile-icon-bottom"></div>
+          <h2 class="subheading">Coming soon...</h2>
+          <p class="content">
+            We&apos;re working with the government to create something really
+            special to help you keep your family safe online.
+          </p>
+          <div class="cta-caption">Want to find out more?</div>
+          <a
+            class="cta"
+            href="mailto:jonny@justaskmax.com?subject=Website enquiry"
+            >Get in touch</a
+          >
+        </div>
+        <div class="hero"></div>
+      </div>
+      <div class="affiliates-wrapper">
+        <img
+          class="afilliate"
+          src="logo/cyberaccelerator_acceleratoralumi_iaw_ncsc_logo_col%201.png"
+        />
+        <img class="afilliate" src="logo/bbc-logo-design.jpg" />
+        <img
+          class="afilliate afilliate-smallest-hidden"
+          src="logo/the_guardian_logo.jpg"
+        />
+        <img
+          class="afilliate afilliate-hidden"
+          src="logo/Belfast-Telegraph.jpg"
+        />
+        <img
+          class="afilliate afilliate-hidden"
+          src="logo/ETI_iM6WAAI5K2Y.jpg"
+        />
+        <img
+          class="afilliate afilliate-hidden"
+          src="logo/Tech-co-Logo-%20copy.jpg"
+        />
+        <img class="afilliate afilliate-hidden small" src="logo/Unknown.jpg" />
+        <img
+          class="afilliate afilliate-hidden"
+          src="logo/bbc-iplayer-logo-vector.jpg"
+        />
+      </div>
+    </div>
+  </body>
+</html>
